@@ -1,0 +1,13 @@
+header h2 {display: block;}
+
+nav ul {display: flex; justify-content: right;}
+
+main figure {
+        float: right;
+        width: 50%;
+        margin-left: 2%;
+        padding-bottom: .5rem;}
+div.produceGallery {column-count: 3;}
+div.produceGallery figure {
+    flex-basis: 46%;
+}
