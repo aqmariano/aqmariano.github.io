@@ -1,0 +1,10 @@
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }//end ul
+    ul li a {
+        border: none;
+    }
+}//end nav

@@ -1,0 +1,78 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+}
+
+div#headerWrapper {background-color: $primaryColor;}
+
+header {
+    .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;}
+    img {max-width: 100%; height: auto;}
+    .image {flex-basis: 5rem;}
+    .headerText {padding-left: 5px;}
+    padding: 1rem $gutter;
+    h1 {
+	margin: 0;
+	font-size: 1.5rem;
+    font-weight: $heavyWeight;}
+    h2{
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: $regularWeight;
+    display: none;}
+} //end of header
+
+div#navWrapper {background-color: #111;}
+nav {
+    ul{margin: 0; padding: 0;}
+    li {list-style-type: none;}
+    li.active {background-color: #333; font-weight: $lightWeight;}
+    a {
+    display: block;
+    padding: .9rem 0; /*44px min*/
+    color: #eee;
+    text-align: left;
+    text-decoration: none;
+    padding-left: 1rem;}
+    a:hover {background-color: #444;}
+}//end of nav
+
+div#mainWrapper {background-color: lighten($primaryColor, 60%);}
+div.heroimage img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    }
+main{display: block; padding: 1rem $gutter; background-color: white;
+    h1 {color: $primaryColor;
+    font-weight: $heavyWeight;}
+    figure img {max-width: 100%; height: auto;}
+    figure{margin: 0; width: 100%; padding-left: 2rem; float: right;}
+} //end main
+
+div#footerWrapper {background-color: $primaryColor;}
+footer {
+    text-align: center;
+    padding: 1rem $gutter;
+    font-weight: $lightWeight;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
