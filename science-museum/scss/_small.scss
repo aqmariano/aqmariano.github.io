@@ -58,7 +58,7 @@ div.heroimage img {
 main{display: block; padding: 1rem $gutter; background-color: white;
     h1 {color: $primaryColor;
     font-weight: $heavyWeight;}
-    figure img {max-width: 100%; height: auto;}
+    figure img {max-width: 100%; height: auto; padding-bottom: 2rem;}
     figure{margin: 0; width: 100%; padding-left: 2rem; float: right;}
 } //end main
 
