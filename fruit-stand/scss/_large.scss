@@ -8,7 +8,6 @@ nav {
     li {width:auto;}
     a {padding: .7rem 1rem;}
 }//end of nav
-div.produceGallery {column-count: 4;}
-/*4 column wouldn't work unless I got rid of the gutters- looked bad*/
+
 div.produceGallery figure {
-    flex-basis: 29%;}
+    flex-basis: 25%; padding: 5px;}

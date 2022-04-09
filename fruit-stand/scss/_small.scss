@@ -48,9 +48,9 @@ div#mainWrapper {background-color: lighten($primaryColor, 20%);}
 
 /*Gallery*/
 div.produceGallery {
-    display: flex; flex-wrap: wrap; column-count: 2;}
+    display: flex; flex-wrap: wrap;}
 div.produceGallery figure {
-    flex-basis: 96%; margin: 1rem 2%;}
+    flex-basis: 50%; margin: 0;}
 div.produceGallery figure img {
     max-width: 100%; height: auto;}
 div.produceGallery figcaption {text-align: center;}
