@@ -50,9 +50,9 @@ div#mainWrapper {background-color: lighten($primaryColor, 20%);}
 div.produceGallery {
     display: flex; flex-wrap: wrap;}
 div.produceGallery figure {
-    flex-basis: 50%; margin: 0;}
+    flex-basis: 46%; margin: 1rem 2%;}
 div.produceGallery figure img {
-    max-width: 100%; height: auto;}
+    width: 100%; height: auto;}
 div.produceGallery figcaption {text-align: center;}
 
 main{display: block; padding: 1rem $gutter; background-color: white;
