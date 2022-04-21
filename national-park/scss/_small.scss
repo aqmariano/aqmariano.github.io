@@ -59,6 +59,7 @@ main{display: block; padding: 1rem $gutter; background-color: white;
     h2 {
         color: $primaryColor;
         font-weight: $heavyWeight;}
+    h3 {margin: 0; padding: 0;}
     //start of cards
     $cbr: 10px;
     div.planavisitcards {
