@@ -1,0 +1,14 @@
+header h2 {display: block;}
+
+nav {
+    ul {padding-left: $gutter; display: flex; justify-content: left;}
+    li {width: auto;}
+    a {padding: .5rem 1rem;}
+}
+
+main figure {
+        float: right;
+        width: 50%;
+        margin-left: 2%;
+        padding-bottom: .5rem;
+}

@@ -1,0 +1,104 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+div#topBar {
+    background-color: $menuColor;
+    color: white;
+    font-size: .8rem;
+    font-weight: $heavyWeight;
+    padding: 1rem $gutter;
+}//end #topBar
+
+div#headerWrapper {
+    background-image: url(../images/heroimage/hero560.jpg); height: 168px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}//end #headerWrapper
+
+header {
+    .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;}
+    h1 {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+	margin: 0;
+    padding: 1.5rem $gutter;
+	font-size: 2rem;
+    font-weight: $heavyWeight;}
+} //end of header
+
+div#navWrapper {background-color: $menuColor;}
+nav {
+    button{
+        background: transparent; border: none; font-size: 1.5rem; padding: .5rem; color: rgba(255,255,255,0.9);
+    }//end button
+    ul{margin: 0; padding: 0; border-top: solid 1px rgba(255,255,255,0.1);
+    display: none;}
+    ul.open {display: block;}
+    li {list-style-type: none; border-bottom: solid 1px rgba(255,255,255,0.1);}
+    li.active {background-color: lighten($menuColor, 10%); font-weight: $lightWeight;}
+    a {
+    display: block; padding: .9rem 0; color: #eee; text-align: left; text-decoration: none; padding-left: 1rem;}
+    a:hover {background-color: lighten($menuColor, 5%);}
+}//end of nav
+
+main{display: block; padding: 1rem $gutter; background-color: white;
+    h2 {
+        color: $primaryColor;
+        font-weight: $heavyWeight;}
+    //start of cards
+    $cbr: 10px;
+    div.planavisitcards {
+        display: flex; flex-wrap: wrap;}
+    div.card {
+        margin: 10px; flex-basis: 100%; background-color: lighten($primaryColor, 50%); border: 1px solid black; border-radius: $cbr;
+        section {
+            background-color: $primaryColor; color: white; text-align: center; padding-bottom: 10px;  padding-top: 10px; border-top-left-radius: $cbr; border-top-right-radius: $cbr;}
+        p {margin: 1rem 2vw;}
+        a {
+            display: block; text-align: center; background-color: white; padding: 1rem 0; margin: 1rem 3vw; border-radius: $cbr; text-decoration: none; color: $primaryColor;}
+        a:hover {
+            background-color: lighten($primaryColor, 20%); color: white;}
+        } //end div.card
+    div.card:hover img {
+        animation: rotate 3s 1;}
+    img {
+        display: block; margin-left: auto; margin-right: auto; padding-top: 10px; position: relative; max-width: 150px; height: auto;}
+    @keyframes rotate {
+        0% {transform: rotate(0deg); animation-timing-function: ease-out;}
+        15% {transform: rotate(40deg);}
+        30% {transform: rotate(-30deg);}
+        50% {transform: rotate(10deg);}
+        75% {transform: rotate(-5deg);}
+        100% {transform: rotate(0deg);animation-timing-function: ease-in;}
+        }//end rotate keyframe
+} //end main
+div#mainWrapper {background-color: lighten($primaryColor, 55%);}
+
+footer {
+    color: #eee;
+    text-align: center;
+    padding: 1rem $gutter;
+    font-weight: $lightWeight;
+}
+div#footerWrapper {background-color: $primaryColor;}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,17 @@
+nav, main, footer {
+        max-width: 1200px;
+        margin: auto;}
+
+div#headerWrapper {
+    background-image: url(../images/heroimage/hero1600.jpg); height: 480px;
+    background-size: cover;
+}//end #headerWrapper
+
+nav {
+    button {display: none;}
+    ul, ul.open {padding-left: $gutter; padding-right: $gutter; display: flex; justify-content: right; border: none;}
+    li {width:auto; border: none;}
+    a {padding: .5rem 1rem;}
+}//end of nav
+
+main div.card {flex-basis: 30%;}
