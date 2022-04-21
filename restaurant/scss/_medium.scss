@@ -1,8 +1,9 @@
 header h2 {display: block;}
 
 nav {
-    ul {padding-left: $gutter; display: flex; justify-content: left;}
-    li {width: auto;}
+    button {display: none;}
+    ul, ul.open {padding-left: 7vw; display: flex; justify-content: left; border: none;}
+    li {width:auto; border: none;}
     a {padding: .5rem 1rem;}
 }
 
