@@ -1,0 +1,18 @@
+header, main, footer {
+        max-width: 1200px;
+        margin: auto;}
+
+header div.headername {width: 100%;}
+
+nav {width: 100%; margin-top: auto; margin-bottom: auto;
+    button {display: none;}
+    ul, ul.open {
+      position: relative; display: flex; background-color: transparent; width: auto; border: none; justify-content: flex-end;
+    }
+    ul li {border: none; font-size: 1.2rem;}
+    ul li a {color: white; padding: .5rem 1rem; margin-left: .2rem;}
+}//end of nav
+
+main div.card {flex-basis: 23%;margin: 5px;}
+main img {max-width: 100%; height: auto;}
+
