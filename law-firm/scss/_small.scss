@@ -80,7 +80,7 @@ main{display: block; padding: 1rem $gutter; background-color: white;
             text-decoration: none; color: white;}}//end row1
     .cta {padding: $rowpad $colpad;
         .ctaitems {
-            text-align: center; padding: 1rem 0; background-color: $primaryColor;}
+            text-align: center; padding: 1rem 0; background-color: darken($primaryColor, 30%);}
         a {
             color: white; font-weight: $heavyWeight; text-decoration: none; font-size: 1.2rem;}
         a:hover {color: darken($primaryColor, 20%);}
