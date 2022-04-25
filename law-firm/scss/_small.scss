@@ -83,7 +83,7 @@ main{display: block; padding: 1rem $gutter; background-color: white;
             text-align: center; padding: 1rem 0; background-color: darken($primaryColor, 30%);}
         a {
             color: white; font-weight: $heavyWeight; text-decoration: none; font-size: 1.2rem;}
-        a:hover {color: darken($primaryColor, 20%);}
+        a:hover {text-decoration: underline 2px white;}
     }//end cta
     .blog {padding: $rowpad $colpad;
         .blogitems {background-color: lighten($primaryColor, 30%);}
