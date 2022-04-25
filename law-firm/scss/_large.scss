@@ -1,0 +1,29 @@
+header, nav, main, footer {
+        max-width: 1200px;
+        margin: auto;}
+
+nav {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: .5rem 2vw;
+    ul li {border: none;}
+    ul li a {
+        padding: .2rem 1rem;
+        border-radius: 10px;
+        margin: .5rem .2rem;
+    }
+}//end of nav
+
+main{
+    @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .large-#{$i} {flex-basis: $w;}}
+}//end main
+
+footer {
+    div.social a {
+        flex-basis: 5%;
+        font-size: 2.5rem;}
+}
+

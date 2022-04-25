@@ -1,0 +1,40 @@
+div#headerWrapper {
+
+}//end #headerWrapper
+
+header {grid-template-columns: 155px auto auto;
+    div#phone {
+      display: block; justify-self: flex-end;
+        a {color: white; text-decoration: none; font-weight: $heavyWeight; font-size: 1.5rem;}
+        a:hover {color: lighten($primaryColor, 30%);}
+    }//end a
+}//end header
+
+main {
+    @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .medium-#{$i} {flex-basis: $w;}}
+}//end main
+
+div#hamburger, div#closex {display: none;}
+
+nav{height: auto;
+    ul {display: flex;justify-content: flex-end;border: none;}
+    li {border: none;}
+    ul li a {
+        padding: .2rem 1rem;
+        border-radius: 10px;
+        margin: .5rem .2rem;
+    }
+}//end nav
+
+div#headerWrapper {grid-row-start: 1;}
+div#navWrapper {grid-row-start: 2;}
+div#mainWrapper {grid-row-start: 3;}
+div#footerWrapper {grid-row-start: 4;}
+
+footer {
+    div.social a {
+        flex-basis: 10%;
+        font-size: 3rem;}
+}
