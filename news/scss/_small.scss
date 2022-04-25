@@ -1,0 +1,124 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    display: grid;
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+
+div#headerWrapper {
+    grid-row-start: 1;
+    background-color: $primaryColor;
+}//end #headerWrapper
+
+header {
+    display: grid;
+    grid-template-columns: auto;
+    padding: .5rem 2vw;
+    figure {margin: 0 2vw;}
+} //end of header
+
+div#navWrapper {
+    grid-row-start: 2;
+    background-color: $menuColor;}
+
+nav {
+    ul {display: none; border-bottom: 1px solid #eee; margin: 0; padding:0;}
+    ul.open {display: block;}
+    ul li {border-top: 1px solid #eee;list-style-type: none;}
+    ul li a {
+        display: block;
+        color: #333;
+        padding: .9rem $gutter;
+        text-decoration: none;
+        text-align: left;}
+    ul li a:hover {background-color: $menuColor;}
+    ul li.active a {background-color: lighten($menuColor, 15%);}
+    button {
+        position: relative;
+        height: 44px;
+        width: 44px;
+        background: none;
+        border: none;
+        margin-left: $gutter;
+        .line {
+            position: absolute;
+            height: 2px;
+            width: 60%;
+            background-color: $primaryColor;
+            transition: all .3s ease;}
+        .top {top: 29%;}
+        .middle {top: 48%;}
+        .bottom {top: 67%;}
+    }
+}//end of nav
+#hamburgerBtn.open {
+    .top {
+        transform: rotate(45deg);
+        top: 48%;}
+    .middle, .bottom {transform: rotate(-45deg);
+    top: 48%;}
+}
+
+
+main{display: block; padding: 1rem $gutter; background-color: white;
+    .storyGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        figure {margin: 0;}
+        .lead {
+            grid-column: 1/span 2;
+        padding: .5rem 1vw;}
+        .teaser {padding: .5rem 1vw;}
+        .teaser img, .lead img {width: 100%;}
+        figcaption {
+            display: block;
+            text-align: center;
+            font-size: .75rem;
+            margin: 5px 10px}
+    }//end storyGrid
+
+
+} //end main
+div#mainWrapper {
+    grid-row-start: 3;
+    background-color: lighten($primaryColor, 40%);}
+
+footer {
+    display: block;
+    color: #eee;
+    padding: .2rem $gutter;
+    .footergrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;}
+        .footerinfo {
+            padding: .5rem 1vw; margin: 5px $gutter;
+            h4 {margin: 1rem 0; padding: 0;font-size: 1.3rem;}
+            ul {list-style-type: none; font-size: 1.1rem; margin: 2px 0; padding: 0;
+            li {padding: .8rem 0;}
+            a {
+                text-decoration: none;
+                color: white;}
+            li a:hover {color: darken($menuColor, 50%);}
+            }//end ul
+    }//end footergrid
+    .copyright {text-align: center; margin: 3rem 0; opacity: 50%;}
+}//end footer
+div#footerWrapper {
+    grid-row-start: 4;
+    background-color: $primaryColor;}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
