@@ -24,7 +24,7 @@ header {
     figure {margin: 0 2vw;}
 } //end of header
 
-div#navWrapper {
+div.navWrapper {
     grid-row-start: 2;
     background-color: $menuColor;}
 
@@ -34,12 +34,12 @@ nav {
     ul li {border-top: 1px solid #eee;list-style-type: none;}
     ul li a {
         display: block;
-        color: #333;
+        color: black;
         padding: .9rem $gutter;
         text-decoration: none;
         text-align: left;}
-    ul li a:hover {background-color: $menuColor; color: white;}
-    ul li.active a {background-color: lighten($menuColor, 15%); color: white;}
+    ul li a:hover {background-color: lighten($menuColor, 5%);}
+    ul li.active a {background-color: lighten($menuColor, 10%);}
     button {
         position: relative;
         height: 44px;
@@ -89,7 +89,7 @@ main{display: block; padding: 1rem $gutter; background-color: white;
 } //end main
 div#mainWrapper {
     grid-row-start: 3;
-    background-color: lighten($primaryColor, 40%);}
+    background-color: lighten($primaryColor, 70%);}
 
 footer {
     display: block;
