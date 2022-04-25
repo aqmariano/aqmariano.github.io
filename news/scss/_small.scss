@@ -38,8 +38,8 @@ nav {
         padding: .9rem $gutter;
         text-decoration: none;
         text-align: left;}
-    ul li a:hover {background-color: $menuColor;}
-    ul li.active a {background-color: lighten($menuColor, 15%);}
+    ul li a:hover {background-color: $menuColor; color: white;}
+    ul li.active a {background-color: lighten($menuColor, 15%); color: white;}
     button {
         position: relative;
         height: 44px;
