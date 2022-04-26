@@ -1,0 +1,21 @@
+header, nav, main, footer {
+        max-width: 1200px;
+        margin: auto;}
+
+nav {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: .5rem 2vw;
+    ul li {border: none;}
+    ul li a {
+        font-size: .9rem;
+        padding: .5rem 1.2rem;
+        border-radius: 10px;
+        margin: .5rem .2rem;
+    }
+}//end of nav
+
+main {
+    .cards div {flex-basis: 23%; }
+}

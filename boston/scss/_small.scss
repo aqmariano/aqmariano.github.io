@@ -1,0 +1,104 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    display: grid;
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+
+div#headerWrapper {
+    background-image: url(../images/header.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-row-start: 1;
+}//end #headerWrapper
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 2vw;
+    h1 {font-size: 3rem; color: white; margin: 0 0 .5rem 0;}
+    h2 {color: white; margin: 0;}
+    .container {
+    align-items: center;}
+} //end of header
+
+div.navWrapper {
+    grid-row-start: 2;
+    background-color: $menuColor;}
+
+nav {
+    ul {display: none; border-bottom: 1px solid #eee; margin: 0; padding:0;}
+    ul.open {display: block;}
+    ul li {border-top: 1px solid #eee;list-style-type: none;}
+    ul li a {
+        display: block;
+        color: white;
+        padding: .9rem $gutter;
+        text-decoration: none;
+        text-align: left;}
+    ul li a:hover {background-color: lighten($menuColor, 5%);}
+    ul li.active a {background-color: lighten($menuColor, 10%);}
+}//end of nav
+
+
+main{display: block; padding: 0; background-color: white;
+    h1 {padding: 1rem $gutter;}
+    h3 {color: white; font-size: 1.2rem;}
+    .swiper {
+        max-width: 100vw;
+        div.swiper-wrapper {margin-bottom: 30px;}
+        img {
+            width: 100%;
+            display: block;}
+    }//end swiper
+    .cards {padding: 1rem $gutter; display: flex; flex-wrap: wrap; justify-content: center;
+        div {text-align: center; flex-basis: 100%; margin: 15px 5px;}
+        div:nth-child(1) {
+            background-image: url("../images/stay.jpg");background-position: center;}
+        div:nth-child(2) {
+            background-image: url("../images/todo.jpg");background-position: center;}
+        div:nth-child(3) {
+            background-image: url("../images/pass.jpg");background-position: center;}
+        div:nth-child(4) {
+            background-image: url("../images/dining.jpg");background-position: center;}
+        div:nth-child(1) a {background-color: $secondaryColor;}
+        div:nth-child(2) a {background-color: $secondaryColor;}
+        div:nth-child(3) a {background-color: $secondaryColor;}
+        div:nth-child(4) a {background-color: $secondaryColor;}
+        a {
+            display: block; width: 100%; height: 350px; text-decoration: none; padding: 0 2%; transition: all .5s ease-in;
+            img {margin: 15%;}}
+        div a:hover {
+            background: none; text-shadow: 0 0 4px black;}
+    }//end cards
+} //end main
+
+div#mainWrapper {
+    grid-row-start: 3;
+    background-color: lighten($primaryColor, 70%);}
+
+footer {
+    display: block;
+    color: #eee;
+    padding: .2rem $gutter;
+    .copyright {
+        text-align: center; margin: .5rem 0; opacity: 80%;}
+}//end footer
+
+div#footerWrapper {
+    grid-row-start: 4;
+    background-color: $primaryColor;}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

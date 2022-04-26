@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Fill Me In">
+<meta name="author" content="John Doe">
+<title>Boston City: Visit</title>
+
+<!-- FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- STYLE SHEETS -->
+
+<link href="css/styles.css" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+
+</head>
+<body>
+
+<div id="headerWrapper">
+<header class="clearfix">
+<div class="container">
+
+<h1>Boston City</h1>
+    <h2>Where History Comes Alive</h2>
+
+</div>
+</header>
+</div>
+<div class="navWrapper">
+
+    <nav>
+    <button id="hamburgerBtn">&#9776;
+    </button>
+    <ul id="primaryNav">
+        <li class="active"><a href="index.html">Visit</a></li>
+        <li class="parent"><a href="#">Departments</a>
+            <ul>
+                <li><a href="#">Land Fill</a></li>
+                <li><a href="#">Police</a></li>
+                <li><a href="#">Parks and Rev</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pay Bills</a></li>
+        <li><a href="#">Meetings</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+    </nav>
+</div>
+
+<div id="mainWrapper">
+<main class="clearfix">
+
+<!-- START OF SWIPER -->
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <picture><source srcset="images/boston1_p.jpg" media="(max-width: 28.12rem)">
+        <source srcset="images/boston1.jpg" media="(min-width: 28.12rem)">
+        <img src="images/boston1.jpg" alt="Boston City Line"></picture></div>
+    <div class="swiper-slide">
+        <picture><source srcset="images/boston2_p.jpg" media="(max-width: 28.12rem)">
+        <source srcset="images/boston2.jpg" media="(min-width: 28.12rem)">
+        <img src="images/boston2.jpg" alt="Boston In the Fall"></picture></div>
+    <div class="swiper-slide">
+        <picture><source srcset="images/boston3_p.jpg" media="(max-width: 28.12rem)">
+        <source srcset="images/boston3.jpg" media="(min-width: 28.12rem)">
+        <img src="images/boston3.jpg" alt="Boston City"></picture></div>
+    <div class="swiper-slide">
+        <picture><source srcset="images/boston4_p.jpg" media="(max-width: 28.12rem)">
+        <source srcset="images/boston4.jpg" media="(min-width: 28.12rem)">
+        <img src="images/boston4.jpg" alt="Fenway Park"></picture></div>
+  </div>
+     <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<h1>Plan Your Visit</h1>
+
+    <div class="cards">
+        <div>
+            <a href="#"><img src="images/stayicon.png" alt="Hotel"><h3>PLACES TO STAY</h3></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/todoicon.png" alt="To Do"><h3>THINGS TO DO</h3></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/passicon.png" alt="Pass"><h3>PASS TO THE CITY</h3></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/diningicon.png" alt="Dining"><h3>FINE DINING</h3></a>
+        </div>
+    </div>
+</main>
+</div>
+
+<div id="footerWrapper">
+<footer>
+
+<div class="copyright">&copy;2022 Aubrey Mariano</div>
+
+</footer>
+</div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
