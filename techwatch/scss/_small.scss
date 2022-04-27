@@ -1,0 +1,114 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+div#pageWrapper {
+    display: grid;
+    grid-template-areas:
+        "hamburger"
+        "header"
+        "content"
+        "footer"
+        "nav";
+    grid-template-columns: 100%;
+}//end of pageWrapper
+
+div#pageWrapper > div#headerWrapper {
+    grid-area: header;}
+div#pageWrapper > div#navWrapper {
+    grid-area: nav;}
+div#pageWrapper > div#mainWrapper {
+    grid-area: content;}
+div#pageWrapper > div#hamburgerWrapper {
+    grid-area: hamburger;}
+div#pageWrapper > div#footerWrapper {
+    grid-area: footer;}
+
+/* body rules */
+body {
+    display: grid;
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+
+div#headerWrapper {
+    background-color: $primaryColor;
+}//end #headerWrapper
+
+header {
+    display: grid;
+    grid-template-columns: 155px auto 44px;
+    align-items: center;
+    padding: 0 2vw;
+    margin: 0;
+} //end of header
+
+div#navWrapper {background-color: $menuColor;}
+
+div#hamburger a, div#exit a {
+    display: block;
+    padding: .8rem 2vw;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+
+div#hamburger { background-color: $menuColor;}
+
+div#closex a {margin-right: 2vw;}
+
+nav {height: 100vh;
+    ul {border-bottom: $highlight solid 1px; margin: 0; padding:0; width: 100%;}
+    ul li {border-top: $highlight solid 1px;list-style-type: none;}
+    ul li a {
+        display: block;
+        color: white;
+        padding: .9rem 2vw;
+        text-decoration: none;
+        text-align: left;}
+    ul li a:hover {background-color: $secondaryColor; color: $dark; border: $highlight solid 1px;}
+    ul li.active a {background-color: $highlight; color: $dark;}
+}//end of nav
+
+main{
+    display: block; padding: 1rem $gutter; background-color: white;
+    h1 {
+        color: $primaryColor;
+        font-weight: $heavyWeight;}
+    h2 {color: darken($primaryColor, 20%); font-size: 1.5rem; margin: 0; padding: 0;}
+    div.names {display: flex; flex-wrap: wrap;}
+    div.card {margin: 5px; flex-basis: 100%;
+        figure img {max-width: 100%; height: auto;}
+        p {margin: 10px 0 0 0;}
+        figure.tablet1 img {
+            display: block; float: right; margin-left: 1rem; margin-bottom: 10px;}
+        figure.tablet2 img {
+            display: block; float: left; margin-bottom: 10px;}
+        figure.tablet3 img {
+            display: block; float: right; margin-bottom: 10px;}
+    }
+} //end main
+
+div#mainWrapper {
+    background-color: lighten($primaryColor, 65%);}
+
+footer {
+    color: #eee;
+    text-align: center;
+    padding: .2rem $gutter;
+}//end footer
+
+div#footerWrapper {
+    background-color: $primaryColor;}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,34 @@
+div#pageWrapper {display: grid;
+    grid-template-areas:
+        "header header"
+        "nav content"
+        "footer footer";
+    grid-template-columns: 150px auto;
+}//end of pageWrapper
+
+header {
+    grid-template-columns: auto;
+}//end header
+
+div#hamburger, div#exit {display: none;}
+
+nav{height: auto;
+    ul {border: none;}
+    li {border: none;}
+    ul li a {
+        padding: 13px 1rem;
+    }
+}//end nav
+
+main {
+    div.names {display: flex; flex-wrap: wrap;}
+    div.card {margin: 5px; flex-basis: 100%;
+        figure img {max-width: 200px; height: auto;}
+        p {margin: 0 0 10px 0;}
+        figure.tablet1 img {
+            display: block; float: right; margin-left: 1rem;}
+        figure.tablet2 img {
+            display: block; float: left; margin-right: 1rem;}
+        figure.tablet3 img {
+            display: block; float: right; margin-left: 1rem;}
+    }}
