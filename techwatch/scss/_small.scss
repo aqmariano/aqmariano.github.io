@@ -96,7 +96,7 @@ main{
 } //end main
 
 div#mainWrapper {
-    background-color: #03776C;}
+    background-color: lighten($primaryColor, 65%);}
 
 footer {
     color: #eee;
@@ -106,7 +106,7 @@ footer {
 }//end footer
 
 div#footerWrapper {
-    background-color: $primaryColor;}
+    background-color: #035E53;}
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
