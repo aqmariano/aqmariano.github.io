@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Fill Me In">
+<meta name="author" content="John Doe">
+<title>Swag Shop: Order</title>
+
+<!-- FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- STYLE SHEETS -->
+
+<link href="css/styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div id="pageWrapper">
+    <div class="content">
+<!-- START OF HEADER -->
+<div id="headerWrapper">
+<header class="clearfix">
+<div class="container">
+
+    <figure class="logo"><img src="images/sslogo.png" alt="Swag Shop Logo"></figure>
+
+    <h1>Swag Shop</h1>
+
+    <button id="hamburgerBtn">&#9776;</button>
+
+</div>
+</header>
+</div>
+
+<!-- START OF NAV -->
+<div class="navWrapper">
+    <nav>
+
+    <div>Swag Shop</div>
+    <ul id="primaryNav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li  class="active"><a href="index.html">Order</a></li>
+        <li><a href="#">Customers Reviews</a></li>
+    </ul>
+
+    </nav>
+</div>
+
+<!-- START OF MAIN -->
+<div id="mainWrapper">
+<main class="clearfix">
+
+<h1>Swag Shop Order Form</h1>
+
+<!-- START OF FORM -->
+<form method="get" action="thanks.html">
+    <fieldset>
+        <legend>Customer Information</legend>
+        <label class="top">Full Name* <input type="text" name="name" required></label>
+        <label class="top">Phone* <input type="tel" name="phone" placeholder="1234567890" required></label>
+        <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+    </fieldset>
+    <fieldset>
+        <legend>Swag Information</legend>
+        <label class="top">Date Needed <input type="text" name="date" placeholder="MM/DD/YYY"></label>
+        <label class="top">Business Name <input type="text" name="business name"></label>
+        <label class="top">Business URL <input type="url" name="business url"></label>
+        <label class="top">Color <select name="color">
+            <option value="#">Please Select &#9662;</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Purple">Purple</option>
+            <option value="Black">Black</option>
+            <option value="Orange">Orange</option></select>
+        </label>
+        <label class="top">Quanity <input type="number" name="quanity"></label>
+    <div>Material</div>
+        <label class="sbs">Aluminum <input type="radio" name="material" value="Aluminum"></label>
+        <label class="sbs">Plastic <input type="radio" name="material" value="Plastic"></label>
+    </fieldset>
+    <fieldset>
+        <legend>Payment Information</legend>
+        <label class="top">Name on Card* <input type="text" name="name on card" required></label>
+        <label class="top">Card Number* <input type="text" name="card number" required></label>
+        <label class="top">Expiration Date* <input type="number" name="expiration date" placeholder="MM/YY" required></label>
+    </fieldset>
+
+<input type="submit" value="Complete My Order" class="submitBtn">
+</form>
+
+</main>
+</div>
+
+<!-- START OF FOOTER -->
+<div id="footerWrapper">
+<footer>
+
+<div class="copyright">&copy;2022 Aubrey Mariano</div>
+
+</footer>
+</div>
+
+</div> <!--END OF #content-->
+</div> <!--END OF .pageWrapper-->
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

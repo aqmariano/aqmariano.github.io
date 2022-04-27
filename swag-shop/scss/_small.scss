@@ -1,0 +1,153 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    display: grid;
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+
+div#headerWrapper {
+    background-color: $primaryColor;
+    grid-row-start: 1;
+}//end #headerWrapper
+
+#pageWrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+.moveOver>.content{transform: translateX(-180px);}
+.content {transition: transform 500ms ease;}
+
+header {
+    .container {display: grid; grid-template-columns: 100px auto 48px; padding: .5rem $gutter; align-items: center;}
+    .logo {float: left;margin: 0; max-width: 100%; height: auto;}
+    h1 {font-size: 3rem; color: white; margin: 0 2rem;}
+    button {
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        align-self: flex-start;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        text-align: right;
+        color: white;}
+} //end of header
+
+div.navWrapper {
+    grid-row-start: 2;
+    background-color: $menuColor;}
+
+nav {
+    background: $menuColor;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    div {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 0;
+        font-size: 1.1rem;
+        color: white;
+    }
+    ul {width: 100%; margin: 0; padding: 0;}
+    ul.open {display: block;}
+    ul li {
+        border-top: 1px solid rgba(255,255,255,0.25); list-style-type: none;}
+    ul li a {
+        display: block;
+        padding: .9rem .5rem;
+        text-align: right;
+        border-bottom: 1px rgba(255,255,255,0.25) solid;
+        text-decoration: none;
+        color: white;}
+    ul li a:hover {background-color: lighten($menuColor, 5%);}
+    ul li.active a {background-color: lighten($menuColor, 10%);}
+}//end of nav
+
+main{display: block; padding: 0; margin: 0; background-color: white;
+    h1 {padding: 1rem $gutter; color: darken($primaryColor, 5%);}
+
+/*FORM*/
+    form fieldset {
+       margin: 2rem 0;
+        border: 1px solid $secondaryColor;
+        border-radius: 10px;
+        padding: .5rem 2%;}
+    form legend {
+        color: $primaryColor;
+        margin: 0 1rem;
+        padding: 0 .5rem;}
+    form label.top, form div {
+        display: block;
+        padding-top: 1rem;
+        font-size: .8rem;
+    }
+    form label.top input, form label.top select {
+        -webkit-appearance: none;//overrides default style
+        display: block;
+        font: 1rem;
+        border: solid 1px #999;
+        border-radius: 4px;
+        padding: .75rem;
+        width: 100%;
+        max-width: 20rem;
+        background-color: rgba(0,0,0,0.1);
+    }
+    form label.sbs {
+        display: block;
+        padding: .75rem;
+    }
+    form input.submitBtn {
+        border: none;
+        background-color: $menuColor;
+        color: white;
+        border-radius: 4px;
+        padding: .75rem 1.5rem;
+        margin: 0 0 2rem 2%;
+        width: 96%;
+        max-width: 20rem;
+    }
+    form input.submitBtn:hover {
+        background-color: lighten($primaryColor, 20%);
+    }
+    form label.top input:required {
+      border-left: red solid 6px;
+    }
+    form label.top input:required:valid {
+        border-left: green solid 6px;
+    }
+} //end main
+
+div#mainWrapper {
+    grid-row-start: 3;
+}
+
+footer {
+    display: block;
+    color: #eee;
+    padding: .2rem $gutter;
+    .copyright {
+        text-align: center; margin: .5rem 0; opacity: 80%;}
+}//end footer
+
+div#footerWrapper {
+    grid-row-start: 4;
+    background-color: $primaryColor;}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

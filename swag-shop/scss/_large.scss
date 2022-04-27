@@ -1,0 +1,21 @@
+header, nav, main, footer {
+        max-width: 1200px;
+        margin: auto;}
+#hamburgerBtn {display: none;}
+nav {
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    div {display: none;}
+    ul, ul.open {display: flex;
+        margin-left: $gutter;}
+    ul li {border: none;}
+    ul li a {
+        border: none;
+        padding: 1rem 1.5rem;
+    }
+}//end of nav
+
+form label.sbs {
+    padding: .4rem 0;
+}
