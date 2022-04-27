@@ -70,9 +70,10 @@ nav {height: 100vh;
         color: white;
         padding: .9rem 2vw;
         text-decoration: none;
-        text-align: left;}
+        text-align: left;
+    font-size: 1.2rem;}
     ul li a:hover {background-color: $secondaryColor; color: $dark; border: $highlight solid 1px;}
-    ul li.active a {background-color: $highlight; color: $dark;}
+    ul li.active a {background-color: $highlight; color: black;}
 }//end of nav
 
 main{
@@ -99,6 +100,7 @@ div#mainWrapper {
 
 footer {
     color: #eee;
+    font-size: 1.2rem;
     text-align: center;
     padding: .2rem $gutter;
 }//end footer
