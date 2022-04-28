@@ -25,7 +25,7 @@ div#headerWrapper {
 .content {transition: transform 500ms ease;}
 
 header {
-    .container {display: grid; grid-template-columns: 100px auto 48px; padding: .5rem $gutter; align-items: center;}
+    .container {display: grid; grid-template-columns: 100px auto 48px; padding: .5rem $gutter; align-items: center; margin: 0 $gutter;}
     .logo {float: left;margin: 0; max-width: 100%; height: auto;}
     h1 {font-size: 3rem; color: white; margin: 0 2rem;}
     button {
@@ -79,11 +79,12 @@ main{display: block; padding: 0; margin: 0; background-color: white;
     h1 {padding: 1rem $gutter; color: darken($primaryColor, 5%);}
 
 /*FORM*/
+    form {margin: 1rem $gutter;}
     form fieldset {
        margin: 2rem 0;
         border: 1px solid $secondaryColor;
         border-radius: 10px;
-        padding: .5rem 2%;}
+        padding: 1rem 2%;}
     form legend {
         color: $primaryColor;
         margin: 0 1rem;
