@@ -1,0 +1,131 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+div#pageWrapper {
+
+}//end of pageWrapper
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+
+div#headerWrapper {
+    background-color: $primaryColor;
+}//end #headerWrapper
+
+header {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: 0 $gutter;
+    margin: 0;
+} //end of header
+
+div#navWrapper {
+    background-color: $menuColor;}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: $menuColor;
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;}
+    ul li {
+        flex-basis: 33.3%;
+        float: left;
+        width: 25%;}
+    ul li a {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: lighten($menuColor,10%);
+        color: #eee;
+        padding: .5rem 0;
+        text-decoration: none;
+        text-align: center;}
+    ul li a:hover {
+        background-color: $secondaryColor;
+        color: #000000;
+        border: $highlight solid 1px;}
+    ul li.active a {
+        background-color: $highlight;
+        color: white;}
+}//end of nav
+
+main{
+    display: block;
+    padding: 1rem $gutter;
+    background-color: white;
+    h1 {
+        color: $primaryColor;
+        font-weight: $heavyWeight;}
+    div#inventoryWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    section {
+        background-color: lightgray;
+        margin: 1rem $gutter;
+        padding: 10px;}
+    figure {
+        margin: 0;
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;}
+    }
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        padding: .3rem 2vw;
+    }
+    div {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto 1fr auto 1fr;
+        align-items: center;
+    }
+    ion-icon {
+        float: left;
+        font-size: 2rem;
+    }
+    div span p {
+            padding-left: 1rem;
+        }
+    }//end div#inventoryWrapper
+} //end main
+
+div#mainWrapper {
+    background-color: lighten($primaryColor, 65%);}
+
+footer {
+    color: #eee;
+    font-size: 1.2rem;
+    font-weight: $heavyWeight;
+    text-align: center;
+    padding: .2rem $gutter;
+}//end footer
+
+div#footerWrapper {
+    background-color: #035E53;}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
