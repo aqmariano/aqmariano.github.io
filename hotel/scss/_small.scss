@@ -26,6 +26,9 @@ header {
     align-items: center;
     padding: 0 $gutter;
     margin: 0;
+    h1 {
+        color: $dark;
+    }
 } //end of header
 
 div#navWrapper {
@@ -37,6 +40,10 @@ nav {
     width: 100%;
     z-index: 999;
     background-color: $menuColor;
+    ion-icon {
+        font-size: 2rem;
+        padding-bottom: .5rem;
+    }
     ul {
         display: flex;
         list-style-type: none;
@@ -47,21 +54,22 @@ nav {
         float: left;
         width: 25%;}
     ul li a {
-        display: block;
+        display: grid;
         width: 100%;
+        font-size: .8rem;
         text-transform: uppercase;
         background-color: lighten($menuColor,10%);
-        color: #eee;
+        color: black;
         padding: .5rem 0;
         text-decoration: none;
-        text-align: center;}
+        text-align: center;
+        justify-items: center;}
     ul li a:hover {
-        background-color: $secondaryColor;
-        color: #000000;
-        border: $highlight solid 1px;}
+        background-color: darken($highlight,10%);
+        color: black;}
     ul li.active a {
         background-color: $highlight;
-        color: white;}
+        color: black;}
 }//end of nav
 
 main{
@@ -69,15 +77,18 @@ main{
     padding: 1rem $gutter;
     background-color: white;
     h1 {
-        color: $primaryColor;
-        font-weight: $heavyWeight;}
+        color: $secondaryColor;
+        font-weight: $heavyWeight;
+        padding: 0;
+        margin: 0;}
     div#inventoryWrapper {
     display: grid;
     grid-template-columns: 1fr;
     section {
-        background-color: lightgray;
+        background-color: lighten($primaryColor,10%);
         margin: 1rem $gutter;
         padding: 10px;}
+    section:hover {background-color: $primaryColor;}
     figure {
         margin: 0;
         width: 100%;
@@ -94,9 +105,9 @@ main{
         padding: .3rem 2vw;
     }
     div {
-        margin: 0 auto;
+        margin: 10px auto;
         display: grid;
-        grid-template-columns: auto 1fr auto 1fr;
+        grid-template-columns: auto auto auto auto;
         align-items: center;
     }
     ion-icon {
@@ -104,13 +115,15 @@ main{
         font-size: 2rem;
     }
     div span p {
-            padding-left: 1rem;
+        padding: .2rem .5rem 0 1rem;
+        margin: 0;
+        font-size: .8rem;
         }
     }//end div#inventoryWrapper
 } //end main
 
 div#mainWrapper {
-    background-color: lighten($primaryColor, 65%);}
+    background-color: lighten($primaryColor, 15%);}
 
 footer {
     color: #eee;
@@ -121,7 +134,7 @@ footer {
 }//end footer
 
 div#footerWrapper {
-    background-color: #035E53;}
+    background-color: $menuColor;}
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {

@@ -1,4 +1,5 @@
 div#pageWrapper {
+
 }//end of pageWrapper
 
 header {
@@ -7,10 +8,11 @@ header {
 
 
 
-nav{
-
-
-}//end nav
+nav {
+    ul li a {
+        font-size: 1rem;
+    }
+}//end of nav
 
 main {
     div#inventoryWrapper {
