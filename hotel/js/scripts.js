@@ -15,7 +15,7 @@ fetch("hoteldata.json")
     myCaptionTag.textContent = myList[i].name;
 
     let theIconLeftTag = document.createElement("ion-icon");
-    theIconLeftTag.name = "navigate-outline";
+    theIconLeftTag.name = "compass";
 
     let theAddress1Tag =
     document.createElement("p");
@@ -30,7 +30,7 @@ fetch("hoteldata.json")
     theAddress3Tag.textContent = myList[i].address[2];
 
     let theIconRightTag = document.createElement("ion-icon");
-    theIconRightTag.name = "call-outline";
+    theIconRightTag.name = "call";
 
     let thePhoneTag =
     document.createElement("p");
