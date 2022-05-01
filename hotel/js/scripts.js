@@ -1,8 +1,4 @@
-// what is the path to the JSON file?
-
-
-//Go fetch it and then wait for a response.
-fetch("../hoteldata.json")
+fetch("hoteldata.json")
   .then((response) => response.json())
   .then((myList) => {
     //Once it comes back, display it to the console.
