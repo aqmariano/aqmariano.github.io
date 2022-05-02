@@ -50,7 +50,7 @@ main{
         margin: 0;
         text-align: center;}
     h2 {
-        color: lighten($secondaryColor,20%);
+        color: $dark;
         font-size: 1.2rem;
         text-align: center;
         margin-top: .5rem;
