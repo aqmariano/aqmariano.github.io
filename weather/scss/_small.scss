@@ -1,0 +1,105 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+div#pageWrapper {
+
+}//end of pageWrapper
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+}//end body
+
+
+div#headerWrapper {
+    background-color: lighten($primaryColor,15%);
+}//end #headerWrapper
+
+header {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: 0 $gutter;
+    margin: 0;
+    h1 {
+        color: $dark;
+        text-align: center;
+        font-size: 1rem;}
+} //end of header
+
+div#navWrapper {
+    background-color: $menuColor;}
+
+nav {
+
+}//end of nav
+
+main{
+    display: block;
+    padding: 1rem $gutter;
+    background-color: white;
+    h1 {
+        color: $secondaryColor;
+        font-weight: $heavyWeight;
+        padding: 0;
+        margin: 0;
+        text-align: center;}
+    h2 {
+        color: lighten($secondaryColor,20%);
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: .5rem;
+        border-bottom: solid 1px lighten($primaryColor,15%);
+    }
+    div#weatherforecast {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    section {
+        display: grid;
+        width: 80%;
+        background-color: $menuColor;
+        margin: 1rem $gutter;
+        justify-items: center;
+        }
+    span {
+        display: block;
+        background-color: lighten($menuColor,20%);
+        color: black;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: .5rem;
+        text-align: center;
+        }
+    img {
+        max-width: 100%;
+        height: auto;
+        }
+    }//end div#weatherforcast
+} //end main
+
+div#mainWrapper {
+    background-color: lighten($primaryColor, 15%);}
+
+footer {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: $heavyWeight;
+    text-align: center;
+    padding: .2rem $gutter;
+}//end footer
+
+div#footerWrapper {
+    background-color: lighten($menuColor,25%);}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,21 @@
+div#pageWrapper {
+
+}//end of pageWrapper
+
+header {
+
+}//end header
+
+
+
+nav {
+    ul li a {
+        font-size: 1rem;
+    }
+}//end of nav
+
+main {
+    div#weatherforecast {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}//end main

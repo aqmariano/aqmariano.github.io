@@ -1,0 +1,9 @@
+header, main, footer {
+        max-width: 1200px;
+        margin: auto;}
+
+main {
+    div#weatherforecast {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
