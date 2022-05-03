@@ -42,7 +42,7 @@ header {
 	   margin: 0;
 	   font-size: 1.2rem;
 	   font-weight: $regularWeight;
-        display: none;}
+        }
 } //end of header
 
 div#navWrapper {
@@ -50,7 +50,7 @@ div#navWrapper {
 
 nav {
     button {
-        margin: .2rem 2vw;
+        margin: .2rem $gutter;
         background: transparent;
         border: none;
         font-size: 1.5rem;
@@ -80,7 +80,7 @@ nav {
         display: block;
         padding: .9rem 0; /*44px min*/
         color: grey;
-        text-align: left;
+        text-align: center;
         text-decoration: none;
         padding-left: 1rem;}
     a:hover {
@@ -102,6 +102,7 @@ div#blackbar {
     display: flex;
     background-color: black;
     padding: 1rem $gutter;
+    width: 100%;
     h1 {
         color: yellow;
         margin-bottom: 5px;}
@@ -161,8 +162,8 @@ main{
         }//end row1
     }//end div.flexed
     .articles {
-        display: grid;
-        grid-template-columns: 100%;
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 1rem;
         .art {
             img {
@@ -205,18 +206,18 @@ main{
 div.clientimg {margin: 0 auto;
 img {
     display: block;
-    padding: 0 $gutter;
-    margin: auto;
+    padding: 0;
+    margin: 0 auto;
     max-width: 100%;
     height: auto;
 }}
 
 
-div#footerWrapper {background-color: $primaryColor;}
+div#footerWrapper {background-image: linear-gradient(lighten($primaryColor,5%), $primaryColor,lighten($primaryColor,5%))}
 footer {
     color: #eee;
-    text-align: center;
-    padding: 0 $gutter;
+    text-align: left;
+    padding: 1rem $gutter;
     font-weight: $lightWeight;
 }
 
