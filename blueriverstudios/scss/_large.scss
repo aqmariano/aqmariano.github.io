@@ -13,4 +13,6 @@ main {
         .large-#{$i} {flex-basis: $w;}
     }
 }
-main figure {width: 50%;}
+picture.heroimage img {
+    display: block;
+    padding: 0 $gutter;}
