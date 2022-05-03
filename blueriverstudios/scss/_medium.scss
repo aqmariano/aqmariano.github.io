@@ -1,0 +1,26 @@
+header h2 {display: block;}
+
+nav {
+    button {
+        display: none;}
+    ul, ul.open {
+        padding-left: 7vw;
+        display: flex;
+        justify-content: right;
+        border: none;}
+    li {
+        width:auto;
+        border: none;}
+    a {
+        padding: .5rem 1rem;}
+}
+main {
+    @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .medium-#{$i} {flex-basis: $w;}}}
+
+main figure {
+        float: right;
+        width: 50%;
+        margin-left: 2%;
+        padding-bottom: .5rem;}

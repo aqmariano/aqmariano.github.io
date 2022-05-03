@@ -1,0 +1,229 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* body rules */
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+}
+
+div#headerWrapper {
+    background-color: white;
+    align-items: center;
+    margin: 0;}
+
+header {
+    padding: 1rem $gutter 0 $gutter;
+    figure.logo {
+        float: left;
+        margin: 0;}
+    .container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: left;
+        margin: 0;}
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0;}
+    div.headerText {
+        margin-left: 3px;
+    }
+    h1 {
+        color: $primaryColor;
+	   margin: 0;
+	   font-size: 2rem;
+        font-weight: $heavyWeight;}
+    h2{
+        color: lightgrey;
+	   margin: 0;
+	   font-size: 1.2rem;
+	   font-weight: $regularWeight;
+        display: none;}
+} //end of header
+
+div#navWrapper {
+    background-color: white;}
+
+nav {
+    button {
+        margin: .2rem 2vw;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: black;
+        font-family: $fontFamily;
+        font-weight: $lightWeight;
+        span:nth-child(1){display: block;}
+        span:nth-child(2){display: none;}
+        }//end button
+    button.open span:nth-child(1) {
+        display: none;}
+    button.open span:nth-child(2) {
+        display: block;}
+    ul{
+        margin: 0;
+        padding: 0;
+        border-top: solid 1px rgba(255,255,255,0.1);
+        display: none;}
+    ul.open {
+        display: block;}
+    li {
+        list-style-type: none;
+        border-bottom: solid 1px rgba(255,255,255,0.1);}
+    li.active {
+        font-weight: $heavyWeight;}
+    a {
+        display: block;
+        padding: .9rem 0; /*44px min*/
+        color: grey;
+        text-align: left;
+        text-decoration: none;
+        padding-left: 1rem;}
+    a:hover {
+        background-color: lightgrey;}
+}//end of nav
+
+div#mainWrapper {background-color: white;}
+
+picture.heroimage img {
+    display: block;
+    padding: 0 $gutter;
+    margin: auto;
+    max-width: 100%;
+    height: auto;}
+
+div#blackbarWrapper {background-color: black;}
+
+div#blackbar {
+    display: flex;
+    background-color: black;
+    padding: 1rem $gutter;
+    h1 {
+        color: yellow;
+        margin-bottom: 5px;}
+    h2 {
+        color: yellow;
+        font-style: italic;
+        font-size: 2.2rem;
+        margin-top: 2px;}
+    p {
+        margin:0;
+        color: white;}
+    ul {
+        color: white;
+        }
+    div#expect {
+        padding-right: 2.5rem;
+    }
+    div#formula {
+        text-align: right;
+        ul {list-style-type: none;}
+    }
+    }//end div.blackbar
+
+main{
+    display: block;
+    padding: 1rem $gutter;
+    background-color: white;
+    h2 {
+        color: $primaryColor;
+        font-weight: $heavyWeight;}
+    @for $i from 1 through 12 {
+        $w:($i/12)*100%;
+        .small-#{$i} {flex-basis: $w;}
+    }
+    div.flexed {display: flex; flex-wrap: wrap; justify-content: center;
+    .row1 {padding: 0; text-align: left;
+        .bbg {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        border: 2px lightgray solid;}
+        h2 {
+            color: $primaryColor;
+            padding: 15px 0 0 10px;
+            margin: 0;
+            font-weight: $lightWeight;}
+        img {
+            max-width: 100%;
+            height: auto;
+            padding: 5px;}
+         p {
+             font-size: .8rem;
+             font-weight: $lightWeight;
+             color: lightgrey;
+             padding: 0 10px 2.5rem 10px;
+             margin: 0;}
+        }//end row1
+    }//end div.flexed
+    .articles {
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 1rem;
+        .art {
+            img {
+                max-width: 100%;
+                height: auto;
+                padding: 0;
+                margin: 0;}
+            h2 {
+                margin-bottom: 0;
+            }}//end .art
+        .infra {
+            padding: 5px;
+        }
+        .tech {
+            padding: 5px;
+        }
+        .price {
+            padding: 5px;
+            button {
+                background-color: $primaryColor;
+                width: 75%;
+                border: none;
+                border-radius: 10px;
+                margin-top: 10px;
+            a {
+                    color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                }
+            }
+        }
+        .live {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            padding: 5px;
+        }
+    }
+} //end main
+
+div.clientimg {margin: 0 auto;
+img {
+    display: block;
+    padding: 0 $gutter;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}}
+
+
+div#footerWrapper {background-color: $primaryColor;}
+footer {
+    color: #eee;
+    text-align: center;
+    padding: 0 $gutter;
+    font-weight: $lightWeight;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
